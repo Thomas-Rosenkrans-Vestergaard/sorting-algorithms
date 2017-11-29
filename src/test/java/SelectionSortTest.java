@@ -14,14 +14,4 @@ public class SelectionSortTest
 		sorting.sort(input, Integer::compare);
 		assertArrayEquals(input, expected);
 	}
-
-	@Test
-	public void selectionSort() throws Exception
-	{
-		int[]         input    = new int[]{9, 7, 4, 8, 2};
-		int[]         expected = new int[]{2, 4, 7, 8, 9};
-		SelectionSort sorting  = new SelectionSort();
-		sorting.selectionSort(input);
-		assertArrayEquals(input, expected);
-	}
 }

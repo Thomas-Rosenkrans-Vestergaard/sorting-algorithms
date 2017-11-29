@@ -28,27 +28,4 @@ public class SelectionSort implements SortingAlgorithm
 			}
 		}
 	}
-
-	/**
-	 * Implementation of selection sort algorithm.
-	 *
-	 * @param array The input array.
-	 */
-	public void selectionSort(int[] array)
-	{
-		for (int x = 0; x < array.length; x++) {
-			int minimum = x;
-			for (int j = x + 1; j < array.length; j++) {
-				if (array[j] < array[minimum]) {
-					minimum = j;
-				}
-			}
-
-			if (minimum != x) {
-				int temp = array[x];
-				array[x] = array[minimum];
-				array[minimum] = temp;
-			}
-		}
-	}
 }
