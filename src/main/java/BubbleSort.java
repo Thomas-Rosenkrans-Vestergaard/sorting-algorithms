@@ -12,8 +12,7 @@ public class BubbleSort implements SortingAlgorithm
 	 */
 	@Override public <T> void sort(T[] array, Comparator<T> comparator)
 	{
-		int end = array.length;
-		while (true) {
+		for (int end = array.length; end > 0; end--) {
 			boolean swap = false;
 			for (int x = 1; x < end; x++) {
 				if (comparator.compare(array[x - 1], array[x]) == 1) {
@@ -24,7 +23,6 @@ public class BubbleSort implements SortingAlgorithm
 				}
 			}
 
-			end -= 1;
 			if (!swap) {
 				return;
 			}

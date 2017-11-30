@@ -28,22 +28,22 @@ public class HeapSort implements SortingAlgorithm
 
 	private <T> void heapify(T[] array, int n, int i, Comparator<T> comparator)
 	{
-		int largest = i;
-		int l       = 2 * i + 1;
-		int r       = 2 * i + 2;
+		int largestNode = i;
+		int leftNode    = 2 * i + 1;
+		int rightNode   = 2 * i + 2;
 
-		if (l < n && comparator.compare(array[l], array[largest]) == 1)
-			largest = l;
+		if (leftNode < n && comparator.compare(array[leftNode], array[largestNode]) == 1)
+			largestNode = leftNode;
 
-		if (r < n && comparator.compare(array[r], array[largest]) == 1)
-			largest = r;
+		if (rightNode < n && comparator.compare(array[rightNode], array[largestNode]) == 1)
+			largestNode = rightNode;
 
-		if (largest != i) {
+		if (largestNode != i) {
 			T swap = array[i];
-			array[i] = array[largest];
-			array[largest] = swap;
+			array[i] = array[largestNode];
+			array[largestNode] = swap;
 
-			heapify(array, n, largest, comparator);
+			heapify(array, n, largestNode, comparator);
 		}
 	}
 }

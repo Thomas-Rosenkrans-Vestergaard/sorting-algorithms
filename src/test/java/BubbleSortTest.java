@@ -11,6 +11,6 @@ public class BubbleSortTest
 		Integer[]  expected = new Integer[]{2, 4, 7, 8, 9};
 		BubbleSort sorting  = new BubbleSort();
 		sorting.sort(input, Integer::compare);
-		assertArrayEquals(input, expected);
+		assertArrayEquals(expected, input);
 	}
 }

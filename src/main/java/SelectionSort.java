@@ -19,6 +19,7 @@ public class SelectionSort implements SortingAlgorithm
 				if (comparator.compare(array[j], array[minimum]) == -1) {
 					minimum = j;
 				}
+
 			}
 
 			if (minimum != x) {
